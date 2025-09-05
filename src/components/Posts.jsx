@@ -53,7 +53,11 @@ export const Post = (props) => {
       <div className="interactions flex flex-col gap-2 p-3">
         <div className="stats flex place-content-between text-[13px] ">
           <div className="reactions flex">
-            <img src="@pics/download.png" alt="" className="w-4 h-4" />
+            <img
+              src="/download.png"
+              alt=""
+              className="w-4 h-4 bg-[rgb(50,52,54)]"
+            />
             <p>{props.reactionCount}</p>
           </div>
           <div className="flex gap-4">

@@ -1,10 +1,10 @@
+import { Post } from "@/components/Posts";
 import Image from "next/image";
-import { Story } from "./components/Story";
-import { Post } from "./components/Posts";
+import { Balloon } from "@/components/Balloon";
 export default function Home() {
   return (
     <div>
-      <Post
+      {/* <Post
         profilePic="https://scontent.fuln8-1.fna.fbcdn.net/v/t39.30808-1/482089205_1170691381723979_607858962561793200_n.jpg?stp=cp0_dst-jpg_s40x40_tt6&_nc_cat=100&ccb=1-7&_nc_sid=2d3e12&_nc_ohc=dxlwkstfRJMQ7kNvwGwbx7Q&_nc_oc=Adl8tSUog2nuAZGfneut2kph-h8SytoLCgk3xV_lzcimlbfRb1gTg9j-0kaDNW46ck4&_nc_zt=24&_nc_ht=scontent.fuln8-1.fna&_nc_gid=gYhsRRyAcZPu6nkA6dw0ZA&oh=00_AfaFMYS-b6UQEc8F19EzpnqUvL8MT-zp8Ukbu5LmVwKcfw&oe=68BE19CC"
         name="Khandsuren Gantogtokh"
         date="1d"
@@ -14,7 +14,7 @@ export default function Home() {
         reactionCount="4.6k"
         commentCount="499"
         shareCount="1.6k"
-      ></Post>
+      ></Post> */}
       <Post
         profilePic="https://scontent.fuln8-1.fna.fbcdn.net/v/t39.30808-1/351363919_199334103062894_9068609386125173171_n.jpg?stp=cp0_dst-jpg_s40x40_tt6&_nc_cat=1&ccb=1-7&_nc_sid=2d3e12&_nc_ohc=PmuwyLW-OsIQ7kNvwFX8qXB&_nc_oc=AdkXsj3IdvX8G0uzP1bfsOXQYI0HbZlHEHQoAQU6sWPuAWQgy2utSbhTV1-_fnkge5M&_nc_zt=24&_nc_ht=scontent.fuln8-1.fna&_nc_gid=0A_-_psB6lbsZ2H9hpVWzA&oh=00_AfYN3rdmPkTsyzl_Z4Fdkys5NMHOWb9dOidI6s29atauxA&oe=68BE2E3E"
         name="Meme for mathematicians"
@@ -37,6 +37,7 @@ export default function Home() {
         commentCount="1"
         shareCount="5"
       ></Post>
+      <Balloon color="red"></Balloon>
     </div>
   );
 }
