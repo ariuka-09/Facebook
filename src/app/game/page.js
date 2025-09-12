@@ -1,21 +1,30 @@
 import { Balloon } from "@/components/Balloon";
 export default function Home() {
   const balloons = [
-    { ungu: "Red" },
-    { ungu: "Blue" },
-    { ungu: "Green" },
-    { ungu: "Yellow" },
-    { ungu: "Orange" },
-    { ungu: "Purple" },
-    { ungu: "Pink" },
-    { ungu: "Brown" },
-    { ungu: "Black" },
-    { ungu: "White" },
+    { color: "Red" },
+    { color: "Blue" },
+    { color: "Green" },
+    { color: "Yellow" },
+    { color: "Orange" },
+
+    // { color: "Purple" },
+    // { color: "Pink" },
+    // { color: "Brown" },
+    // { color: "Black" },
+    // { color: "White" },
   ];
   return (
-    <div className="flex flex-wrap wrap">
-      {balloons.map((balloon) => {
-        return <Balloon color={balloon.ungu}></Balloon>;
+    <div className="flex">
+      {balloons.map((balloon, index) => {
+        return (
+          <Balloon
+            top={Math.random() * 400}
+            left={Math.random() * 400}
+            nums={index + 1}
+            color={balloon.color}
+            key={index + Math.random}
+          ></Balloon>
+        );
       })}
     </div>
   );

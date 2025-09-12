@@ -1,20 +1,33 @@
 export const Post = (props) => {
+  const {
+    profilePic,
+    name,
+    date,
+    setting,
+    text,
+    image,
+    reactionCount,
+    commentCount,
+    shareCount,
+    removeHandler,
+    id,
+  } = props;
   return (
     <div className="post w-[33%]  m-auto mb-5 bg-[rgb(50,52,54)] rounded-[15px]">
       <div className="profile flex place-content-between">
         <div className="flex gap-3 p-3">
           <img
-            src={props.profilePic}
+            src={profilePic}
             alt=""
             className="w-10 h-10 rounded-[50%] bg-contain"
           />
           <div>
             <div className="profileName ">
-              <p>{props.name}</p>
+              <p>{name}</p>
             </div>
             <div className="time&setting flex gap-2 opacity-60">
-              <p>{props.date}</p>
-              <p>{props.setting}</p>
+              <p>{date}</p>
+              <p>{setting}</p>
             </div>
           </div>
         </div>
@@ -31,11 +44,12 @@ export const Post = (props) => {
             <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3" />
           </svg>
           <svg
+            onClick={() => removeHandler(id)}
             xmlns="http://www.w3.org/2000/svg"
             width="16"
             height="16"
             fill="currentColor"
-            className="bi bi-x scale-225"
+            className="bi bi-x scale-225 cursor-pointer"
             viewBox="0 0 16 16"
           >
             <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708" />
@@ -44,10 +58,10 @@ export const Post = (props) => {
       </div>
       <div className="content ">
         <div className="text p-3">
-          <p>{props.text} </p>
+          <p>{text} </p>
         </div>
         <div className="mainPicture w-full h-[80%]">
-          <img src={props.image} alt="" className="w-full h-full" />
+          <img src={image} alt="" className="w-full h-full" />
         </div>
       </div>
       <div className="interactions flex flex-col gap-2 p-3">
@@ -58,14 +72,14 @@ export const Post = (props) => {
               alt=""
               className="w-4 h-4 bg-[rgb(50,52,54)]"
             />
-            <p>{props.reactionCount}</p>
+            <p>{reactionCount}</p>
           </div>
           <div className="flex gap-4">
             <div className="comments">
-              <p>{props.commentCount + " comment"}</p>
+              <p>{commentCount + " comment"}</p>
             </div>
             <div className="shares">
-              <p>{props.shareCount + " shares"}</p>
+              <p>{shareCount + " shares"}</p>
             </div>
           </div>
         </div>
@@ -107,7 +121,7 @@ export const Post = (props) => {
               viewBox="0 0 16 16"
             >
               <path
-                fill-rule="evenodd"
+                fillRule="evenodd"
                 d="M14.854 4.854a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 4H3.5A2.5 2.5 0 0 0 1 6.5v8a.5.5 0 0 0 1 0v-8A1.5 1.5 0 0 1 3.5 5h9.793l-3.147 3.146a.5.5 0 0 0 .708.708z"
               />
             </svg>
