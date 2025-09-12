@@ -75,8 +75,17 @@ export default function Home() {
     const filterredPosts = fbPosts.filter((post) => post.id !== id);
     setFbPosts(filterredPosts);
   }
+const post = (name, text) =>{
+  
+}
+  return (
 
-  return fbPosts.map((element, index) => {
+      <div className="flex flex-col ">
+    <div className="flex flex-col items-center">
+      <AddPost post={post}></AddPost>
+    </div>
+ 
+    {fbPosts.map((element, index) => {
     function post() {}
     return (
       <div>
@@ -94,10 +103,12 @@ export default function Home() {
           shareCount={element.shareCount}
           removeHandler={removeHandler}
         />
-        <AddPost post={post}></AddPost>
+      
       </div>
     );
-  });
+  })}
+
+     </div>);
 }
 /* <Post
         profilePic="https://scontent.fuln8-1.fna.fbcdn.net/v/t39.30808-1/482089205_1170691381723979_607858962561793200_n.jpg?stp=cp0_dst-jpg_s40x40_tt6&_nc_cat=100&ccb=1-7&_nc_sid=2d3e12&_nc_ohc=dxlwkstfRJMQ7kNvwGwbx7Q&_nc_oc=Adl8tSUog2nuAZGfneut2kph-h8SytoLCgk3xV_lzcimlbfRb1gTg9j-0kaDNW46ck4&_nc_zt=24&_nc_ht=scontent.fuln8-1.fna&_nc_gid=gYhsRRyAcZPu6nkA6dw0ZA&oh=00_AfaFMYS-b6UQEc8F19EzpnqUvL8MT-zp8Ukbu5LmVwKcfw&oe=68BE19CC"
