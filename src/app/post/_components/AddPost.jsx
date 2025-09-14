@@ -38,18 +38,19 @@ export function AddPost(props) {
           onChange={handleImgChange}
           className="bg-[white] rounded p-1.5 text-[15px] text-black "
         />
-        <button
-          className="cursor-pointer border-2 border-white hover:opacity-90 bg-[#0866ff]"
-          onClick={() => {
-            post(name, text, img);
-            setName("");
-            setText("");
-            setImg("");
-          }}
-        >
-          {" "}
-          Post
-        </button>
+        <a href="/">
+          <button
+            className="cursor-pointer border-2 border-white hover:opacity-90 bg-[#0866ff] w-full"
+            onClick={() => {
+              post(name, text, img);
+              setName("");
+              setText("");
+              setImg("");
+            }}
+          >
+            Post
+          </button>
+        </a>
       </div>
     </div>
   );
